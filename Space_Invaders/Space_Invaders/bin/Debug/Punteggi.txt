@@ -1,3 +1,0 @@
-sas  -  3
-ssrasd  -  1
-das  -  1
