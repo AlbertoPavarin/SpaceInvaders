@@ -1,0 +1,13 @@
+C:\Users\ricky\Desktop\Scuola\Informatica\3F\Space_Invaders\Space_Invaders\bin\Debug\Space_Invaders.exe.config
+C:\Users\ricky\Desktop\Scuola\Informatica\3F\Space_Invaders\Space_Invaders\bin\Debug\Space_Invaders.exe
+C:\Users\ricky\Desktop\Scuola\Informatica\3F\Space_Invaders\Space_Invaders\bin\Debug\Space_Invaders.pdb
+C:\Users\ricky\Desktop\Scuola\Informatica\3F\Space_Invaders\Space_Invaders\bin\Debug\zu\Space_Invaders.resources.dll
+C:\Users\ricky\Desktop\Scuola\Informatica\3F\Space_Invaders\Space_Invaders\obj\Debug\Space_Invaders.csprojAssemblyReference.cache
+C:\Users\ricky\Desktop\Scuola\Informatica\3F\Space_Invaders\Space_Invaders\obj\Debug\Space_Invaders.Form1.resources
+C:\Users\ricky\Desktop\Scuola\Informatica\3F\Space_Invaders\Space_Invaders\obj\Debug\Space_Invaders.Properties.Resources.resources
+C:\Users\ricky\Desktop\Scuola\Informatica\3F\Space_Invaders\Space_Invaders\obj\Debug\Space_Invaders.Form1.zu.resources
+C:\Users\ricky\Desktop\Scuola\Informatica\3F\Space_Invaders\Space_Invaders\obj\Debug\Space_Invaders.csproj.GenerateResource.cache
+C:\Users\ricky\Desktop\Scuola\Informatica\3F\Space_Invaders\Space_Invaders\obj\Debug\Space_Invaders.csproj.CoreCompileInputs.cache
+C:\Users\ricky\Desktop\Scuola\Informatica\3F\Space_Invaders\Space_Invaders\obj\Debug\zu\Space_Invaders.resources.dll
+C:\Users\ricky\Desktop\Scuola\Informatica\3F\Space_Invaders\Space_Invaders\obj\Debug\Space_Invaders.exe
+C:\Users\ricky\Desktop\Scuola\Informatica\3F\Space_Invaders\Space_Invaders\obj\Debug\Space_Invaders.pdb
