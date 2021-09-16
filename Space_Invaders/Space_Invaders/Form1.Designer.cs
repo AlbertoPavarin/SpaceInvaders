@@ -39,7 +39,7 @@
             this.playerPb = new System.Windows.Forms.PictureBox();
             this.utenteTxt = new System.Windows.Forms.TextBox();
             this.salvaBtn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.ricominciareBtn = new System.Windows.Forms.Button();
             this.ClassificaDGV = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.playerPb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ClassificaDGV)).BeginInit();
@@ -96,13 +96,13 @@
             this.salvaBtn.UseVisualStyleBackColor = false;
             this.salvaBtn.Click += new System.EventHandler(this.salvaBtn_Click);
             // 
-            // button1
+            // ricominciareBtn
             // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.ricominciareBtn.BackColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.ricominciareBtn, "ricominciareBtn");
+            this.ricominciareBtn.Name = "ricominciareBtn";
+            this.ricominciareBtn.UseVisualStyleBackColor = false;
+            this.ricominciareBtn.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // ClassificaDGV
             // 
@@ -128,7 +128,7 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.ricominciareBtn);
             this.Controls.Add(this.salvaBtn);
             this.Controls.Add(this.utenteTxt);
             this.Controls.Add(this.PunteggioTxt);
@@ -157,7 +157,7 @@
         private System.Windows.Forms.Timer gameTimer;
         private System.Windows.Forms.TextBox utenteTxt;
         private System.Windows.Forms.Button salvaBtn;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button ricominciareBtn;
         private System.Windows.Forms.DataGridView ClassificaDGV;
     }
 }

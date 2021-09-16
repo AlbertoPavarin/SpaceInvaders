@@ -3,6 +3,7 @@ using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 using System.IO;
+using System.Media;
 /*Autore: Pavarin Alberto
  * Questo programma permette di giocare a space invaders
  */
@@ -23,6 +24,9 @@ namespace Space_Invaders
         bool sparo;
         bool isgameOver;
 
+        SoundPlayer esplosione = new SoundPlayer("suoni/EsplosionInavder.wav");
+        SoundPlayer sparoSuono = new SoundPlayer("suoni/Sparo.wav");
+
         public Form1()
         {
             InitializeComponent();
@@ -35,6 +39,7 @@ namespace Space_Invaders
             nuovaPartitaBtn.Visible = false;
             RegoleBtn.Visible = false;
             playerPb.BackgroundImage = Properties.Resources.player;
+            viteLbl.Visible = true;
             PunteggioTxt.Visible = true;
             RegoleBtn.Enabled = false;
             setup();
@@ -132,6 +137,7 @@ namespace Space_Invaders
             {
                 timerProiettiliNemici = 300;
                 creazioneProiettili("proiettileInvader");
+                sparoSuono.Play();
             }
 
             foreach (Control x in this.Controls) // Per ogni x 
@@ -150,7 +156,7 @@ namespace Space_Invaders
                         gameOver("Gli invaders ti hanno superato, il mondo verrà conquistato");
                     }
 
-                    if (x.Bounds.IntersectsWith(playerPb.Bounds)) // Se gli invaders collidono con il player viene mostrato il messaggio di game over
+                    if (x.Bounds.IntersectsWith(playerPb.Bounds))// Se gli invaders collidono con il player viene mostrato il messaggio di game over
                     {
                         gameOver("Sei stato ucciso dagli Invaders. Ora il mondo verrà conquistato dagli invasori.");
                     }
@@ -161,6 +167,7 @@ namespace Space_Invaders
                         {
                             if (y.Bounds.IntersectsWith(x.Bounds)) // Se il proiettile collide con l'invaders allora sia il proiettile che il nemico vengono rimossi e il punteggio viene incrementato di uno 
                             {
+                                esplosione.Play();
                                 this.Controls.Remove(x);
                                 this.Controls.Remove(y);
                                 punteggio ++;
@@ -192,10 +199,9 @@ namespace Space_Invaders
                     {
                         this.Controls.Remove(x);
                     }
-
                     if (x.Bounds.IntersectsWith(playerPb.Bounds)) // Se il proiettile colpisce il giocatore viene rimosso il proiettile e viene mostrato il messaggio di game over
-                    {
-                        this.Controls.Remove(x);
+                    {                   
+                        this.Controls.Remove(x);   
                         gameOver("Sei stato ucciso dagli Invaders. Ora il mondo verrà conquistato dagli invasori.");
                     }
                 }
@@ -237,12 +243,11 @@ namespace Space_Invaders
         }
 
         private void elimina()
-        {
+        {  
             foreach (PictureBox i in Invaders)
             {
                 this.Controls.Remove(i);
             }
-
             foreach (Control x in this.Controls)
             {
                 if (x is PictureBox)
@@ -303,18 +308,18 @@ namespace Space_Invaders
                 }
             }
             while (utenteTxt.Text != "");
-            button1.Visible = true;
-            button1.Enabled = true;
+            ricominciareBtn.Visible = true;
+            ricominciareBtn.Enabled = true;
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            // il pulsante "nouva partita?" permette di fare una nuova partita
+            // il pulsante "nuova partita?" permette di fare una nuova partita
             elimina();
             utenteTxt.Visible = false;
             salvaBtn.Visible = false;
-            button1.Visible = false;
-            button1.Enabled = false;
+            ricominciareBtn.Visible = false;
+            ricominciareBtn.Enabled = false;
             playerPb.Visible = true;
             ClassificaDGV.Visible = false;
             ClassificaDGV.Enabled = false;
@@ -338,15 +343,17 @@ namespace Space_Invaders
             proiettili.Image = Properties.Resources.bullet; // L'immagine della picturBox sarà il proiettile 
             proiettili.Size = new Size(5, 20); // Viene impostata la grandezza della PicturBox
             proiettili.Tag = bulletTag;
-            proiettili.Left = playerPb.Left + playerPb.Width / 2; // Viene impostata da dove partirà il proiettile
+            proiettili.Left = playerPb.Left + playerPb.Width / 2; // Viene impostata da dove partirà il proiettile al livello di asse x
 
             if ((string)proiettili.Tag == "proiettile")
             {
                 proiettili.Top = playerPb.Top - 20;
+                sparoSuono.Play();
             }
             else if ((string)proiettili.Tag == "proiettileInvader")
             {
                 proiettili.Top = -100;
+                sparoSuono.Play();
             }
 
             this.Controls.Add(proiettili);
